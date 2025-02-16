@@ -64,11 +64,10 @@ return {
 
         -- LSP Servers configuration
         local servers = {
-            clangd = {
-                format = { enable = true }, -- Ensure formatting is enabled
-            },
+            clangd = {},
             pyright = {},
             ts_ls = {},
+            bashls = {},
             lua_ls = {
                 settings = {
                     Lua = {
