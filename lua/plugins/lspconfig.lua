@@ -79,7 +79,7 @@ return {
 
         -- Install required LSP servers and tools via Mason
         local ensure_installed = vim.tbl_keys(servers)
-        vim.list_extend(ensure_installed, { 'stylua', 'isort', 'black' })
+        vim.list_extend(ensure_installed, { 'stylua', 'clang-format', 'isort', 'black', 'flake8' })
 
         -- Setup Mason Tool Installer
         require('mason-tool-installer').setup { ensure_installed = ensure_installed }

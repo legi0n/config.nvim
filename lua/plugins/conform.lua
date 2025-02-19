@@ -39,9 +39,26 @@ return {
         formatters_by_ft = {
             -- Formatter settings by filetype
             lua = { 'stylua' }, -- Use 'stylua' for Lua files
+            c = { 'clang-format' }, -- Use 'clang-format' for C files
+            cpp = { 'clang-format' }, -- Use 'clang-format' for C++ files
             python = { 'black', 'isort' }, -- Use 'isort' and 'black' for Python files
             -- Example: You can run the first available formatter from the list
             -- javascript = { 'prettierd', 'prettier', stop_after_first = true },
+        },
+        formatters = {
+            ['clang-format'] = {
+                prepend_args = function(ctx)
+                    local config_file = vim.fs.find({ '.clang-format' }, { path = ctx.filename, upward = true })
+                    if config_file[1] then
+                        return {}
+                    else
+                        return {
+                            '--style',
+                            '{IndentWidth: 4, TabWidth: 4, UseTab: Never}',
+                        }
+                    end
+                end,
+            },
         },
     },
 }
