@@ -35,6 +35,7 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins with a link (or a github repo: 'owner/repo' link).
 require('lazy').setup {
     'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+    'mg979/vim-visual-multi', -- Enable multi-cursor support for simultaneous editing of multiple locations in your file.
     {
         'folke/tokyonight.nvim',
         priority = 1000, -- Make sure to load this before all the other start plugins.
