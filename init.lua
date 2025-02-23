@@ -8,7 +8,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Font Configuration
-vim.g.have_nerd_font = false -- Set to true if using a Nerd Font
+vim.g.have_nerd_font = true -- Set to true if using a Nerd Font
 
 -- Load Core Settings
 require 'core.options' -- Load options.lua

@@ -3,7 +3,7 @@
 
 -- UI Settings
 vim.opt.number = true -- Show absolute line numbers
--- vim.opt.relativenumber = true   -- Uncomment to enable relative line numbers
+vim.opt.relativenumber = true -- Uncomment to enable relative line numbers
 vim.opt.cursorline = true -- Highlight the current line
 vim.opt.signcolumn = 'yes' -- Keep signcolumn visible
 vim.opt.scrolloff = 10 -- Keep 10 lines of context above/below cursor
