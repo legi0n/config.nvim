@@ -68,6 +68,7 @@ require('lazy').setup {
     require 'plugins.cmp',
     require 'plugins.conform',
     require 'plugins.lspconfig',
+    require 'plugins.mini',
     require 'plugins.neo-tree',
     require 'plugins.telescope',
     require 'plugins.treesitter',
