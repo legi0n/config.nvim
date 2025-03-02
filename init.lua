@@ -1,6 +1,4 @@
--- [[ legi0n's Neovim config ]]
--- Inspired by kickstart.nvim.
--- See: https://github.com/nvim-lua/kickstart.nvim
+-- [[ Neovim config ]]
 
 -- Leader Key Configuration
 -- Must be set before loading any plugins
@@ -55,6 +53,28 @@ require('lazy').setup {
         opts = { signs = false },
     },
     {
+        'nvim-neo-tree/neo-tree.nvim',
+        version = '*',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'nvim-tree/nvim-web-devicons', -- Recommended, but not strictly required
+            'MunifTanjim/nui.nvim',
+        },
+        cmd = 'Neotree',
+        keys = {
+            { '<leader>tt', ':Neotree reveal<CR>', desc = '[T]oggle Neo[T]ree', silent = true },
+        },
+        opts = {
+            filesystem = {
+                window = {
+                    mappings = {
+                        ['<leader>tt'] = 'close_window',
+                    },
+                },
+            },
+        },
+    },
+    {
         -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
         -- used for completion, annotations and signatures of Neovim apis
         'folke/lazydev.nvim',
@@ -68,14 +88,12 @@ require('lazy').setup {
     },
     require 'plugins.cmp',
     require 'plugins.conform',
+    require 'plugins.dap',
+    require 'plugins.gitsigns',
+    require 'plugins.harpoon',
     require 'plugins.lspconfig',
     require 'plugins.mini',
-    require 'plugins.neo-tree',
     require 'plugins.telescope',
     require 'plugins.treesitter',
     require 'plugins.which-key',
 }
-
--- Modeline
--- See `:help modeline`
--- vim: ts=4 sts=4 sw=4 et

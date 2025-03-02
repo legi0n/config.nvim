@@ -6,12 +6,12 @@ return {
     cmd = { 'ConformInfo' }, -- Command to display Conform's information
     keys = {
         {
-            '<leader>f', -- Shortcut to trigger formatting
+            '<leader>cf', -- Shortcut to trigger formatting
             function()
                 require('conform').format { async = true, lsp_format = 'fallback' }
             end,
             mode = '', -- Normal mode (default)
-            desc = '[F]ormat buffer', -- Description for key mapping
+            desc = '[C]ode: [F]ormat buffer', -- Description for key mapping
         },
     },
     opts = {

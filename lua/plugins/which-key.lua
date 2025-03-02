@@ -50,13 +50,15 @@ return {
         -- Document existing key chains with custom groups and commands
         -- You can define your own key groups and document them for quick access
         spec = {
-            { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } }, -- Code-related keybindings
-            { '<leader>d', group = '[D]ocument' }, -- Document-related keybindings
-            { '<leader>r', group = '[R]ename' }, -- Rename keybindings
-            { '<leader>s', group = '[S]earch' }, -- Search keybindings
-            { '<leader>w', group = '[W]orkspace' }, -- Workspace keybindings
-            { '<leader>t', group = '[T]oggle' }, -- Toggle-related keybindings
-            { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } }, -- Git-related keybindings
+            { '<leader>b', group = '[B]uffer' },
+            { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
+            { '<leader>d', group = '[D]ebug' },
+            { '<leader>f', group = '[F]ile' },
+            { '<leader>g', group = '[G]it', mode = { 'n', 'v' } },
+            { '<leader>h', group = '[H]arpoon' },
+            { '<leader>p', group = '[P]lugins' },
+            { '<leader>s', group = '[S]earch' },
+            { '<leader>t', group = '[T]oggle' },
         },
     },
 }
